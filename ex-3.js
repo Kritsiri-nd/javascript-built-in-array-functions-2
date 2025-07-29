@@ -1,4 +1,4 @@
-const bills = [
+ const bills = [
   {
     id: "1",
     transactionDate: "2021-08-01",
@@ -374,4 +374,11 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+function billTransaction (bill){
+  return bill.member !== null;
+}
+function memberBillTransaction (bill){
+  return bill.member.name;
+}
+const billMembers = bills.filter(billTransaction).map(memberBillTransaction);
+console.log(billMembers);
